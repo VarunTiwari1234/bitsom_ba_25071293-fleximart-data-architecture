@@ -1,0 +1,28 @@
+============================================================
+FLEXIMART DATA QUALITY & ETL REPORT
+============================================================
+
+--- File: sales_raw.csv ---
+- Records Processed: 41
+- Duplicates Removed: 1 (Transaction ID: T001)
+- Missing Values Handled: 5 (Rows dropped due to missing Customer or Product IDs)
+- Records Loaded Successfully: 35
+
+--- File: products_raw.csv ---
+- Records Processed: 20
+- Duplicates Removed: 0
+- Missing Values Handled: 4 (Prices and Stock Quantities imputed using Sales data)
+- Records Loaded Successfully: 20
+
+--- File: customers_raw.csv ---
+- Records Processed: 26
+- Duplicates Removed: 1 (Customer ID: C001)
+- Missing Values Handled: 5 (Missing emails and registration dates standardized)
+- Records Loaded Successfully: 25
+
+--- ETL Summary ---
+The ETL process successfully transformed raw, inconsistent data into a 
+normalized 4-table relational structure. All alpha-numeric IDs were 
+converted to Integers to ensure database performance and referential 
+integrity.
+============================================================
